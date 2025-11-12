@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
+    <meta charset="UTF-8" />
     <title>Calculadora</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -13,72 +14,50 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Ligação ao ficheiro de estilos -->
+    <link rel="stylesheet" href="CSS/styles.css" />
   </head>
+
   <body>
     <div class="calculadora">
-      <input type="text" id="display" onkeydown="return false" />
       <div class="row mt-5 mb-5 ml-1 mr-1">
         <div class="col-sm-2">
           <div class="card">
             <div class="card-body">
-              <table style="max-width: 80%" class="table">
+              <table style="max-width: 80%" class="table text-center">
                 <tr>
-                  <td>
-                    <button onclick="valor('7')" class="btn btn-primary">7</button>
-                  </td>
-                  <td>
-                    <button onclick="valor('8')" class="btn btn-primary">8</button>
-                  </td>
-                  <td>
-                    <button onclick="valor('9')" class="btn btn-primary">9</button>
-                  </td>
-                  <td>
-                    <button onclick="valor('+')" class="btn btn-primary">+</button>
+                  <td colspan="4">
+                    <input type="text" id="display" onkeydown="return false" class="form-control" />
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    <button onclick="valor('4')" class="btn btn-primary">4</button>
-                  </td>
-                  <td>
-                    <button onclick="valor('5')" class="btn btn-primary">5</button>
-                  </td>
-                  <td>
-                    <button onclick="valor('6')" class="btn btn-primary">6</button>
-                  </td>
-                  <td>
-                    <button onclick="valor('-')" class="btn btn-primary">-</button>
-                  </td>
+                  <td><button onclick="valor('7')" class="btn btn-primary">7</button></td>
+                  <td><button onclick="valor('8')" class="btn btn-primary">8</button></td>
+                  <td><button onclick="valor('9')" class="btn btn-primary">9</button></td>
+                  <td><button onclick="valor('+')" class="btn btn-primary">+</button></td>
                 </tr>
                 <tr>
-                  <td>
-                    <button onclick="valor('1')" class="btn btn-primary">1</button>
-                  </td>
-                  <td>
-                    <button onclick="valor('2')" class="btn btn-primary">2</button>
-                  </td>
-                  <td>
-                    <button onclick="valor('3')" class="btn btn-primary">3</button>
-                  </td>
-                  <td>
-                    <button onclick="valor('*')" class="btn btn-primary">*</button>
-                  </td>
+                  <td><button onclick="valor('4')" class="btn btn-primary">4</button></td>
+                  <td><button onclick="valor('5')" class="btn btn-primary">5</button></td>
+                  <td><button onclick="valor('6')" class="btn btn-primary">6</button></td>
+                  <td><button onclick="valor('-')" class="btn btn-primary">-</button></td>
+                </tr>
+                <tr>
+                  <td><button onclick="valor('1')" class="btn btn-primary">1</button></td>
+                  <td><button onclick="valor('2')" class="btn btn-primary">2</button></td>
+                  <td><button onclick="valor('3')" class="btn btn-primary">3</button></td>
+                  <td><button onclick="valor('*')" class="btn btn-primary">*</button></td>
                 </tr>
                 <tr>
                   <td></td>
-                  <td>
-                    <button onclick="valor('0')" class="btn btn-primary">0</button>
-                  </td>
-                  <td>
-                    <button onclick="limpar()" class="btn btn-primary">C</button>
-                  </td>
-                  <td>
-                    <button onclick="valor('/')" class="btn btn-primary">/</button>
-                  </td>
+                  <td><button onclick="valor('0')" class="btn btn-primary">0</button></td>
+                  <td><button onclick="limpar()" class="btn btn-primary">C</button></td>
+                  <td><button onclick="valor('/')" class="btn btn-primary">/</button></td>
                 </tr>
                 <tr>
                   <td colspan="4">
-                    <button onclick="calcular()" class="btn btn-primary w-100">=</button>
+                    <button onclick="calcular()" class="btn btn-primary w-100 btn-igual">=</button>
                   </td>
                 </tr>
               </table>
